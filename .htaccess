@@ -1,32 +1,41 @@
+## contrôle du cache navigateur - Expire headers
 <IfModule mod_expires.c>
-  Expire Actif le 
+	ExpiresActive On
+	ExpiresDefault "access plus 7200 seconds"
+	ExpiresByType image/jpg 			"access plus 1 week"
+	ExpiresByType image/jpeg 			"access plus 1 week"
+	ExpiresByType image/png 			"access plus 1 week"
+	ExpiresByType image/gif 			"access plus 1 week"
+	ExpiresByType image/svg+xml			"access plus 1 week"
+	AddType image/x-icon .ico
+	ExpiresByType image/ico 			"access plus 1 week"
+	ExpiresByType image/icon 			"access plus 1 week"
+	ExpiresByType image/x-icon 			"access plus 1 week"
+	ExpiresByType text/css 				"access plus 1 week"
+	ExpiresByType text/javascript 		"access plus 1 week"
+	ExpiresByType text/html 			"access plus 7200 seconds"
+	ExpiresByType application/xhtml+xml 	"access plus 7200 seconds"
+	ExpiresByType application/javascript 	"access plus 1 week"
+	ExpiresByType application/x-javascript 	"access plus 1 week"
+	ExpiresByType application/x-shockwave-flash "access plus 1 week"
+</IfModule>
 
-  # Images
-  ExpiresByType image / jpeg "accès plus 1 an"
-  ExpiresByType image / gif "accès plus 1 an"
-  ExpiresByType image / png "accès plus 1 an"
-  ExpiresByType image / webp "accès plus 1 an"
-  ExpiresByType image / svg + xml "accès plus 1 an"
-  ExpiresByType image / x-icon "accès plus 1 an"
+<IfModule mod_headers.c>
 
-  # Vidéo
-  ExpiresByType video / webm "accès plus 1 an"
-  ExpiresByType video / mp4 "accès plus 1 an"
-  ExpiresByType video / mpeg "accès plus 1 an"
+<FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
 
-  # Polices
-  ExpiresByType font / ttf "accès plus 1 an"
-  ExpiresByType font / otf "accès plus 1 an"
-  ExpiresByType font / woff "accès plus 1 an"
-  ExpiresByType font / woff2 "accès plus 1 an"
-  ExpiresByType application / font-woff "accès plus 1 an"
+<FilesMatch "\\.(css)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
 
-  # CSS, JavaScript
-  ExpiresByType text / css "accès plus 1 mois"
-  ExpiresByType text / javascript "accès plus 1 mois"
-  ExpiresByType application / javascript "accès plus 1 mois"
+<FilesMatch "\\.(js)$">
+Header set Cache-Control "max-age=216000, private"
+</FilesMatch>
 
-  # Autres
-  ExpiresByType application / pdf "accès plus 1 mois"
-  ExpiresByType image / vnd.microsoft.icon "accès plus 1 an"
+<FilesMatch "\\.(x?html?|php)$">
+Header set Cache-Control "max-age=600, private, must-revalidate"
+</FilesMatch>
+
 </IfModule>
