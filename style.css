@@ -597,8 +597,6 @@ label{
     }
     form{
         margin-left: 0px;
-        border:1px solid red;
-        
     }
     .barre-texte2{
         flex-direction: column;
