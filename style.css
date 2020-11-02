@@ -76,10 +76,10 @@ a:hover {
 
 /*images de fond*/
 .img-banniere {
-    background-image: url("img/la-chouette-agence-banniere-min.jpg");
+    background-image: url("img/la-chouette-agence-banniere-min.jp2");
 }
 .bg-presentation {
-    background-image: url("img/image-de-presentation-min.jpg");
+    background-image: url("img/image-de-presentation-min.jp2");
 }
 .img-fond {
     background-attachment: fixed;
