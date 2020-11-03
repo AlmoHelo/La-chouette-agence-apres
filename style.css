@@ -39,10 +39,13 @@ p {
     font-weight: normal;
     color: lightgray;
 }
-a:focus {
+a:focus, button:focus{
     /*focus*/
-    background: red;
-    border: 2px solid red;
+    border-top: 3px solid red;
+    border-bottom: 3px solid black;
+}
+input:focus, textarea:focus{
+    border-bottom: 5px solid red;
 }
 a,
 button {
@@ -106,7 +109,7 @@ a {
 }
 .tc-white {
     /*h1 h2 et certains p*/
-    color: #f3976c !important;
+    color: #fff !important;
 }
 .bloc-lg {
     padding: 100px 50px;
@@ -148,7 +151,7 @@ h1 {
     width: 140px;
     margin-top: 22px;
     border-radius: 40px;
-    background: #f3976c;
+    background: #c25523;
     color: #ffffff !important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
@@ -232,6 +235,9 @@ h3 {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px 40px 40px 40px;
 }
+.texte-explication{
+    color:#292929FF!important;
+}
 .contact-equipe {
     /*"contactez notre équipe*/
     font-size: 12px;
@@ -247,7 +253,7 @@ h3 {
     width: 620px;
     font-weight: normal;
     font-size: 32px;
-    background-image: url("img/lines-h2-bg-min.png");
+    background-image: url("img/lines-h2-bg.png");
     box-shadow: 1px 1px 2px lightgray;
     margin: auto;
     margin-bottom: 90px;
@@ -268,7 +274,7 @@ h3 {
 }
 .bg-lines-h2-bg {
     /*image de fond*/
-    background-image: url("img/lines-h2-bg-min.png");
+    background-image: url("img/lines-h2-bg.png");
 }
 .bg-repeat {
     /*image de fond*/
@@ -321,6 +327,9 @@ a[data-lightbox]:hover img {
     color: #ffffff !important;
 }
 /*footer*/
+footer{
+    background-color: #C25523!important;
+}
 .titlefooter {
     font-size: 12px;
     font-weight: normal;
@@ -339,7 +348,7 @@ a[data-lightbox]:hover img {
     /*lien réseaux sociaux*/
     font-size: 30px !important;
     margin: auto;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: #DFDFDFFF!important;
     width: 130px;
     margin-top: 10px;
     margin-left: 30px;
@@ -349,14 +358,9 @@ a[data-lightbox]:hover img {
     color: white !important;
 }
 h4 {
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: #fff !important;
     font-size: 15px;
     font-weight: normal;
-}
-.bgc-atomic-tangerine {
-    /*couleur de fond*/
-    background-color: #f3976c;
-    margin: 0;
 }
 .block-liens {
     width: 90%;
@@ -370,9 +374,12 @@ h4 {
 }
 .footer-liens li {
     list-style-type: disc !important;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color:#DFDFDFFF!important;
     font-size: 14px;
     margin-left: 35px;
+}
+.footer-liens a{
+    color: #000000!important;
 }
 
 /*mobile*/
@@ -380,29 +387,8 @@ h4 {
 @media (max-width: 767px) {
     .logo-chouette {
         margin-left: 10px;
-        width: 50%;
+        width: 70%;
         height: auto;
-    }
-    .triple-button {
-        margin: 10px 10px 0 35px;
-        border: 0px;
-        padding: 9px 10px;
-    }
-    .triple-button .icon-bar {
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 26px;
-    }
-    .nav > li {                                                         /*menu version mobile*/
-        margin-top: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        background: rgba(0, 0, 0, 0.05);
-        text-align: left;
-        padding-left: 15px;
-        width: 100%;
-    }
-    .banniere{
-        flex-wrap: wrap;
-        justify-content: flex-start;
     }
     h1{
         width: 80%;
@@ -526,7 +512,8 @@ h4 {
 .banniere2{
     justify-content: space-between;
     align-items: center;
-    margin: 0px 20px 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .logo-chouette2{
     margin-top: 35px;
@@ -534,7 +521,7 @@ h4 {
 .section_one2{
     display: flex;
     flex-direction: column;width: 100%;
-    background-color: #f3976c;
+    background-color: #C25523;
 }
 .page-text-header{
     color: #fff!important;
@@ -547,7 +534,7 @@ form{
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 60px;
+    padding-left: 60px;
 }
 .form-group{
     display: flex;
@@ -574,6 +561,8 @@ label{
     margin-top: 35px;
     border: 2px solid black;
     font-weight: bold;
+    color: #fff;
+    background-color: #C25523;
 }
 .coordonnées{
     margin-left: 60px;
@@ -588,11 +577,10 @@ label{
     color: #fff!important;
     margin-bottom: 20px;
 }
-.social2{
-    width: 50%;
-}
-.icons2{
+.social2 ul{
+    border: 1px solid white;
     margin: 0;
+    padding: 0;
 }
 @media (max-width: 767px) {
     .banniere{
@@ -609,9 +597,11 @@ label{
     }
     .page-text-header{
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
     form{
-        margin-left: 0px;
+        padding-left: 0px;
     }
     .barre-texte{
         width: 100%;
@@ -626,6 +616,11 @@ label{
     }
     .coordonnées{
         margin-left: 0px;
+    }
+    .social2{
+        
+        margin: 0;
+        padding: 0;
     }
 }
 

@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="page2">
 	<!-- bloc-0 -->
 	<header>
 		<div class="banniere banniere2">
@@ -31,12 +31,12 @@
 					class="logo-chouette logo-chouette2"></a>
 			<nav>
 				<!--version ordi-->
-				<a href="index.html">Accueil</a>
+				<a href="index.html" alt="lien accueil">Accueil</a>
 			</nav>
 		</div>
 	</header>
 	<section class="section_one2">
-		<div class="bloc en-tete texture-paper1">
+		<div class="bloc en-tete texture-paper1 en-tete2">
 			<div class="bloc-lg col-sm-12">
 				<h1 class="text-center page-text-header">
 					Parlons web design !
@@ -50,75 +50,77 @@
 			</div>
 		</div>
 	</section>
-		<!-- bloc-0 END -->
-		<!-- bloc-6 -->
-		<section class="formulaire">
-			<div class="col-sm-6">
-				<form method="post" action="#">
-					<div class="form-group">
-						<label>
-							Nom
-						</label>
-						<input id="name" class="form-control barre" required />
-					</div>
-					<div class="form-group">
-						<label>
-							Adresse email
-						</label>
-						<input id="email" class="form-control barre" type="email" required />
-					</div>
-					<div class="form-group  barre-texte2">
-						<label>
-							Comment nous avez-vous connu ?
-						</label>
-						<input class="form-control barre" type="email" required id="input_504" />
-					</div>
-					<div class="form-group barre-texte">
-						<label class="label_modif">
-							Brief de votre projet (Ajoutez autant de détails que nécessaire)
-						</label>
-						<textarea id="message" class="form-control barre-texte " rows="4" cols="50" required></textarea>
-					</div>
-					<button class="bloc-button btn btn-lg btn-atomic-tangerine envoyer" type="submit">
-						ENVOYER
-					</button>
-				</form>
-			</div>
-			<div class="col-sm-6 coordonnées">
-				<p>contact@lachouetteagence.com</p>
-				<P>2 place Sathonay 69001 Lyon</p>
-				<p>Ouvert de 9h à 18h, du lundi au vendredi</p>
-			</div>
+	<!-- bloc-0 END -->
+	<!-- bloc-6 -->
+	<section class="formulaire">
+		<div class="col-sm-6">
+			<form method="post" action="#" aria-label="formulaire">
+				<div class="form-group">
+					<label for="name">
+						Nom
+					</label>:<input id="name" class="form-control barre" required alt="Nom" />
+				</div>
+				<div class="form-group barre-texte2">
+					<label for="email">
+						Adresse email
+					</label>
+					: <input id="email" class="form-control barre" type="email" required alt="adresse mail" />
+				</div>
+				<div class="form-group  barre-texte2">
+					<label for="input_504">
+						Comment nous avez-vous connu ?
+					</label>
+					: <input class="form-control barre" type="email" required id="input_504" alt="comment nous avez-vous connu" />
+				</div>
+				<div class="form-group barre-texte">
+					<label class="label_modif" for="message">
+						Brief de votre projet (Ajoutez autant de détails que nécessaire)
+					</label>
+					: <textarea id="message" class="form-control barre-texte " rows="4" cols="50"
+						alt="Votre projet" required></textarea>
+				</div>
+				<button class="bloc-button btn btn-lg btn-atomic-tangerine envoyer" type="submit" aria-label="envoyer">
+					ENVOYER
+				</button>
+			</form>
+		</div>
+		<div class="col-sm-6 coordonnées">
+			<p>contact@lachouetteagence.com</p>
+			<P>2 place Sathonay 69001 Lyon</p>
+			<p>Ouvert de 9h à 18h, du lundi au vendredi</p>
+		</div>
 		</div>
 	</section>
 	<!-- bloc-6 END -->
 
 	<!-- Footer - bloc-7 -->
 	<footer class="bloc bgc-atomic-tangerine footer2">
-		<h3 class="text-center footer-titre">
+		<h2 class="text-center footer-titre">
 			La chouette agence - Agence web basée à Lyon.
-		</h3>
-		<nav class="row social social2">
-			<li class="col-sm-3 text-center">
-				<a class="social icons2" href="index.html">
-					<i class="fa fa-twitter icon-md"></i>
-				</a>
-			</li>
-			<li class="col-sm-3 text-center">
-				<a class="social icons2" href="index.html">
-					<i class="fa fa-facebook icon-md"></i>
-				</a>
-			</li>
-			<li class="col-sm-3 text-center">
-				<a class="social icons2" href="index.html">
-					<i class="fa fa-dribbble icon-md"></i>
-				</a>
-			</li>
-			<li class="col-sm-3 text-center">
-				<a class="social icons2" href="index.html">
-					<i class="fa fa-instagram icon-md"></i>
-				</a>
-			</li>
+		</h2>
+		<nav class="row block-social social2">
+			<ul>
+				<li class="col-sm-3 text-center line-social">
+					<a class="social icons2" href="index.html" alt="lien vers réseau social twitter">
+						<i class="fa fa-twitter icon-md" aria-label="icône twitter"></i>
+					</a>
+				</li>
+				<li class="col-sm-3 text-center">
+					<a class="social icons2" href="index.html" alt="lien vers réseau social facebook">
+						<i class="fa fa-facebook icon-md" aria-label="icône facebook"></i>
+					</a>
+				</li>
+				<li class="col-sm-3 text-center">
+					<a class="social icons2" href="index.html" alt="lien vers réseau social ballon">
+						<i class="fa fa-dribbble icon-md" aria-label="icône ballon"></i>
+					</a>
+				</li>
+				<li class="col-sm-3 text-center">
+					<a class="social icons2" href="index.html" alt="lien vers réseau social instagram">
+						<i class="fa fa-instagram icon-md" aria-label="icône instagram"></i>
+					</a>
+				</li>
+			</ul>
 		</nav>
 	</footer>
 	<!-- Footer - bloc-7 END -->
