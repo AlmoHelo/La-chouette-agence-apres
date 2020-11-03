@@ -35,8 +35,8 @@ p {
 .titrescitation {
     /*ligne texte titre et citation*/
     width: 100%;
-    font-size: 27px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: normal;
     color: lightgray;
 }
 a:focus {
@@ -64,38 +64,32 @@ a:hover {
     background-size: cover;
     position: relative;
 }
-
 .bg-dots-bg {
     background-image: url("img/dots-bg-min.png"); /*2e partie du header ??????????????????????????????????????????????????????*/
 }
 
-
-
-
-
-
 /*images de fond*/
 .img-banniere {
-    background-image: url("img/la-chouette-agence-banniere-min.jp2");
+    background-image: url("img/la-chouette-agence-banniere-min.jpg");
 }
 .bg-presentation {
-    background-image: url("img/image-de-presentation-min.jp2");
+    background-image: url("img/image-de-presentation-min.jpg");
 }
 .img-fond {
     background-attachment: fixed;
 }
 /*texture*/
-.texture-paper1::before {
-    background: url("img/texture-paper-min.png");
+.texture-paper1::before{
+    background:url(img/texture-paper-min.png);
     background-size: 280px 280px;
     content: "";
-    position: absolute;
+    background-size: 2px 2px;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 }
-
 h1,
 h2,
 h3,
@@ -134,6 +128,7 @@ a {
     float: left;
     margin-top: 4px;
     font-size: 16px;
+    margin-right: 20px;
 }
 .block-title {
     display: flex;
@@ -219,7 +214,6 @@ h3 {
     margin-top: 85px;
     width: 800px;
     font-weight: normal;
-    font-size: 30px;
     padding-left: 0;
 }
 .auteur {
@@ -263,6 +257,7 @@ h3 {
     width: 800px;
     margin: auto;
     margin-bottom: 70px;
+    display: flex;
 }
 .article {
     width: 350px;
@@ -333,19 +328,22 @@ a[data-lightbox]:hover img {
     color: white !important;
 }
 .block-social {
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
     margin-bottom: 60px;
 }
-.line-social {
-    width: 130px;
-    margin-top: 10px;
+.block-social ul{
+    display: flex;
+    justify-content: center;
 }
 .social {
     /*lien réseaux sociaux*/
     font-size: 30px !important;
     margin: auto;
     color: rgba(255, 255, 255, 0.6) !important;
+    width: 130px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .social:hover {
     color: white !important;
@@ -361,9 +359,14 @@ h4 {
     margin: 0;
 }
 .block-liens {
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-bottom: 30px;
+    display: flex;
+}
+.footer-liens{
+    width: 35%;
+    margin: 0;
 }
 .footer-liens li {
     list-style-type: disc !important;
@@ -435,6 +438,7 @@ h4 {
     }
     .citation{
         margin-top: 30px;
+        padding-left: 20px;
     }
     .auteur{
         margin-top: 10px;
@@ -453,6 +457,8 @@ h4 {
     .port-1{
         width: 100%;
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
     }
     .article{
         width: 100%;
@@ -465,6 +471,13 @@ h4 {
     }
     .section4-h2{
         margin-top: 30px;
+    }
+    /*footer*/
+    .block-social ul{
+        flex-direction: column;
+    }
+    .block-liens{
+        flex-direction: column;
     }
 }
     /*tablette*/
@@ -600,6 +613,9 @@ label{
     form{
         margin-left: 0px;
     }
+    .barre-texte{
+        width: 100%;
+    }
     .barre-texte2{
         flex-direction: column;
         align-items: flex-start;
@@ -612,3 +628,8 @@ label{
         margin-left: 0px;
     }
 }
+
+
+
+
+
